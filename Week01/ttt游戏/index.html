@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+   
+    .container {
+        width: 246px;
+        margin:50px auto;
+    }
+
+    .box {
+        background-color: #ff00ff;
+        height: 80px;
+        width: 80px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+        display: inline-block;
+        vertical-align: middle;
+        /*float:left;*/
+        font-size: 40px;
+        text-align: center;
+        line-height: 80px;
+        cursor: pointer;
+    }
+    #container.end .box{
+    	opacity:0.5;
+    	cursor:not-allowed;
+    }
+    #result,#container{
+    	display: none;
+    }
+    .result-tips{
+    	margin:5px auto;
+    }
+    #reloadBtn{
+    	width:150px;
+    	border:1px solid;
+    	color:#fff;
+    	padding:10px 0;
+    	border-radius: 6px;
+    	margin:10px auto;
+    	cursor:pointer;
+    	text-align: center;
+        background-color: #bb9572;
+    }
+    </style>
+</head>
+
+<body>
+	<div class="container">
+	<div id="startSceen" class="start-sceen">
+		<input type="text" id="currStartPos" maxlength="1">
+
+		<button class="start-btn" id="startBtn">开始</button>	
+		<div class="tips">请输入:1代表x 2代表⚪</div>
+	</div>
+    <div id="container"></div>
+    <div id="result">
+    	<div class="result-tips"></div>
+    	<div role="button" id="reloadBtn">重新开始</div>
+    </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
